@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radikal bremsen. Jetzt. — Klimafakten mit Quellen</title>
+<meta name="description" content="Fossile Energie → CO₂ → Erderwärmung → Katastrophen. Belegte Fakten mit Quellen. Flyer & Sharepics frei zum Download.">
+<style>
+  :root{
+    --ink:#14130F; --yellow:#F6B600; --red:#C81324; --paper:#F2EEE4; --grey:#4A473E;
+    --paper2:#E8E3D6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px; margin:0 auto; padding:0 22px}
+  h1,h2,.kicker,.cta-big,.stat{font-family:"Arial Narrow","Segoe UI Semibold",system-ui,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.3px}
+  a{color:var(--red)}
+  img{max-width:100%;height:auto;display:block}
+
+  /* Hero */
+  .hero{background:var(--ink); color:var(--paper); padding:54px 0 48px}
+  .hero .wrap{text-align:center}
+  .kicker{color:var(--yellow); font-size:.8rem; letter-spacing:2px; margin-bottom:14px}
+  .hero h1{color:var(--paper); font-size:2.5rem; line-height:1.04; margin-bottom:16px}
+  .hero .lead{font-size:1.12rem; max-width:640px; margin:0 auto 8px; color:#EDE7D8}
+  .chainline{font-family:"Arial Narrow",system-ui,sans-serif;font-weight:800;text-transform:uppercase;
+    color:var(--yellow); font-size:1.05rem; margin-top:22px; letter-spacing:.5px}
+  .chainline .r{color:var(--red)}
+  .btn{display:inline-block; background:var(--yellow); color:var(--ink); font-weight:800;
+    text-transform:uppercase; letter-spacing:.5px; text-decoration:none; padding:13px 26px;
+    border-radius:3px; margin-top:26px; font-family:"Arial Narrow",system-ui,sans-serif}
+  .btn:hover{background:#ffc51f}
+
+  /* Sections */
+  section{padding:46px 0}
+  section:nth-of-type(even){background:var(--paper2)}
+  h2{font-size:1.7rem; line-height:1.1; margin-bottom:6px}
+  .step{color:var(--red); font-weight:800; font-size:.8rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; font-family:"Arial Narrow",system-ui,sans-serif}
+  .stat{color:var(--red); font-size:2.6rem; line-height:1; margin:14px 0 10px}
+  p+p{margin-top:12px}
+  .src{font-size:.82rem; color:var(--grey); margin-top:14px}
+  .src a{color:var(--grey)}
+  figure{margin:22px 0 6px; border:1px solid #d9d3c4; background:#fff; border-radius:4px; overflow:hidden}
+  figure img{width:100%}
+  figcaption{font-size:.8rem; color:var(--grey); padding:8px 12px; background:#fff}
+  .hl{background:var(--yellow); font-weight:700; padding:0 4px}
+
+  /* Lever */
+  .lever{background:var(--ink); color:var(--paper); text-align:center}
+  .lever h2{color:var(--paper)}
+  .lever .cta-big{color:var(--yellow); font-size:2.4rem; margin:6px 0 4px}
+  .lever p{color:#EDE7D8; max-width:620px; margin-left:auto; margin-right:auto}
+
+  /* Downloads */
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:18px; margin-top:24px}
+  .card{background:#fff; border:1px solid #d9d3c4; border-radius:5px; overflow:hidden; display:flex; flex-direction:column}
+  .card .thumb{background:var(--ink); aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; overflow:hidden}
+  .card .thumb.doc{aspect-ratio:1/1.1}
+  .card .thumb.doc .doclabel{font-family:"Arial Narrow",system-ui,sans-serif;font-weight:800;
+    text-transform:uppercase;letter-spacing:1px;color:var(--yellow);text-align:center;line-height:1.3}
+  .card .thumb.doc .doclabel .big{display:block;font-size:1.6rem}
+  .card .thumb.doc .doclabel .sm{display:block;font-size:.75rem;color:#cfc9ba}
+  .card .thumb img{width:100%; height:100%; object-fit:cover; object-position:top}
+  .card .body{padding:12px 14px; flex:1; display:flex; flex-direction:column}
+  .card .body strong{font-size:.95rem}
+  .card .body span{font-size:.78rem; color:var(--grey); margin:2px 0 12px}
+  .card .dl{margin-top:auto; display:inline-block; text-align:center; background:var(--ink); color:var(--yellow);
+    text-decoration:none; font-weight:800; text-transform:uppercase; letter-spacing:.5px; font-size:.82rem;
+    padding:9px 12px; border-radius:3px; font-family:"Arial Narrow",system-ui,sans-serif}
+  .card .dl:hover{background:#000}
+
+  /* Sources list */
+  .sources li{margin:8px 0; font-size:.92rem; list-style:none; padding-left:16px; position:relative}
+  .sources li::before{content:"▸"; color:var(--red); position:absolute; left:0}
+
+  /* Footer */
+  footer{background:var(--ink); color:#cfc9ba; padding:34px 0; font-size:.85rem; text-align:center}
+  footer .sig{font-family:"Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:1px; color:var(--yellow); font-weight:800; margin-bottom:10px}
+  footer a{color:#cfc9ba}
+  .imprint{margin-top:16px; font-size:.78rem; color:#8b8577}
+
+  @media(max-width:560px){
+    .hero h1{font-size:1.9rem}
+    .stat{font-size:2rem}
+    .lever .cta-big{font-size:1.8rem}
+    h2{font-size:1.4rem}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Klimafakten · Belegt · Mit Quellen</div>
+    <h1>Wir schlingern mit Vollgas<br>auf die Leitplanke zu</h1>
+    <p class="lead">Fossile Energie → CO₂ → Erderwärmung → Katastrophen. Das ist keine Meinung — das ist Physik. Und es wird nicht langsamer, sondern steiler.</p>
+    <div class="chainline">Fossile&nbsp;→&nbsp;CO₂&nbsp;→&nbsp;Erwärmung&nbsp;→&nbsp;<span class="r">Katastrophe</span></div>
+    <a class="btn" href="#downloads">Flyer &amp; Sharepics herunterladen</a>
+  </div>
+</header>
+
+<!-- GLIED 1 -->
+<section>
+  <div class="wrap">
+    <div class="step">Die Ursache</div>
+    <h2>Das Problem hat einen Namen: fossile Energie</h2>
+    <div class="stat">~90&nbsp;% des CO₂</div>
+    <p>Nicht „die Menschheit" irgendwie, nicht „unser Lebensstil" vage. Die Verbrennung fossiler Energie — <strong>Kohle, Öl, Gas</strong> — verursacht fast 90&nbsp;% des weltweiten CO₂-Ausstoßes und rund zwei Drittel aller Treibhausgase. <span class="hl">Das ist die Wurzel.</span></p>
+    <p>Wer die Erderwärmung stoppen will, muss genau hier ansetzen: fossile Energie herunterfahren — radikal, grundlegend, sofort. Alles andere kuriert nur Symptome.</p>
+    <p class="src">Quelle: <a href="https://www.un.org/en/climatechange/science/causes-effects-climate-change" target="_blank" rel="noopener">Vereinte Nationen — Causes and Effects of Climate Change</a></p>
+  </div>
+</section>
+
+<!-- GLIED 2 -->
+<section>
+  <div class="wrap">
+    <div class="step">Die Folge im Detail</div>
+    <h2>CO₂ steigt — und der Anstieg beschleunigt</h2>
+    <p>Jahr für Jahr stoßen wir nicht nur mehr CO₂ aus — der Anstieg selbst wird steiler. In den 1960ern nahm die CO₂-Konzentration um <strong>0,86&nbsp;ppm pro Jahr</strong> zu, in den 2020ern um <strong>2,63&nbsp;ppm pro Jahr</strong>: mehr als eine Verdreifachung.</p>
+    <figure>
+      <img src="assets/img/chart-co2-konzentration-ppm.png" alt="Diagramm: CO₂-Konzentration in der Atmosphäre 1959–2025, steigende und steiler werdende Kurve">
+      <figcaption>CO₂-Konzentration in der Atmosphäre. Quelle: NOAA Global Monitoring Laboratory, Mauna Loa (Jahresmittel 1959–2025).</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/chart-co2-ausstoss-emissionen.png" alt="Diagramm: Weltweiter fossiler CO₂-Ausstoß, Rekordhoch 2025">
+      <figcaption>Weltweiter fossiler CO₂-Ausstoß — 2025 ein neuer Rekord (38,1&nbsp;Gt). Quelle: Global Carbon Project.</figcaption>
+    </figure>
+    <p class="src">Quellen: <a href="https://gml.noaa.gov/ccgg/trends/" target="_blank" rel="noopener">NOAA GML</a> · <a href="https://globalcarbonbudget.org/" target="_blank" rel="noopener">Global Carbon Project</a></p>
+  </div>
+</section>
+
+<!-- GLIED 3 -->
+<section>
+  <div class="wrap">
+    <div class="step">Die Erwärmung</div>
+    <h2>Drei Jahre in Folge über 1,5&nbsp;°C</h2>
+    <p>2023, 2024 und 2025 lag die globale Mitteltemperatur erstmals in drei aufeinanderfolgenden Jahren über <strong>1,5&nbsp;°C</strong> gegenüber dem vorindustriellen Niveau — der Schwelle des Pariser Abkommens. Europa erwärmt sich dabei mehr als doppelt so schnell wie der globale Durchschnitt.</p>
+    <figure>
+      <img src="assets/img/chart-temperatur-global-europa.png" alt="Diagramm: Mittlere Temperaturabweichung global und Europa seit 1850">
+      <figcaption>Temperaturabweichung vom vorindustriellen Niveau, global &amp; Europa. Quelle: Copernicus C3S/ECMWF, WMO.</figcaption>
+    </figure>
+    <p class="src">Quellen: <a href="https://climate.copernicus.eu/climate-bulletins" target="_blank" rel="noopener">Copernicus C3S</a> · <a href="https://wmo.int/" target="_blank" rel="noopener">WMO State of the Global Climate</a></p>
+  </div>
+</section>
+
+<!-- GLIED 4 -->
+<section>
+  <div class="wrap">
+    <div class="step">Die Katastrophen</div>
+    <h2>Mehr Dürren, Hochwasser, Hitze, Ernteausfälle</h2>
+    <p>Jedes Zehntelgrad zählt. Mit der Erwärmung nehmen Wetterextreme in Häufigkeit und Wucht zu: längere Hitzewellen, heftigere Starkregen und Hochwasser, ausgedehntere Dürren, brennende Wälder, Ernteausfälle und wirtschaftliche Schäden. Der Ozean speicherte 2025 erneut so viel Wärme wie nie zuvor.</p>
+    <p class="src">Quellen: <a href="https://www.ipcc.ch/report/ar6/wg2/" target="_blank" rel="noopener">IPCC AR6</a> · <a href="https://wmo.int/" target="_blank" rel="noopener">WMO</a></p>
+  </div>
+</section>
+
+<!-- HEBEL -->
+<section class="lever">
+  <div class="wrap">
+    <div class="step" style="color:var(--yellow)">Der Hebel</div>
+    <h2>Eine Ursache. Ein Hebel.</h2>
+    <div class="cta-big">Fossile raus. Jetzt.</div>
+    <p>Das verbleibende CO₂-Budget für das 1,5-°C-Ziel reicht bei heutigem Ausstoß rechnerisch nur noch etwa vier Jahre. Es gibt genau eine Maßnahme, die wirkt: fossile Energie radikal und sofort senken.</p>
+    <p class="src" style="color:#a9a394">Quelle: <a href="https://globalcarbonbudget.org/" target="_blank" rel="noopener" style="color:#a9a394">Global Carbon Project (Restbudget 2025)</a></p>
+  </div>
+</section>
+
+<!-- DOWNLOADS -->
+<section id="downloads">
+  <div class="wrap">
+    <div class="step">Zum Weitergeben</div>
+    <h2>Flyer &amp; Sharepics — frei zum Download</h2>
+    <p>Alles frei zur Weitergabe: ausdrucken, aushängen, teilen. Klick auf „Herunterladen".</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="thumb doc"><span class="doclabel"><span class="big">PDF</span><span class="sm">Flyer · A4</span></span></div>
+        <div class="body"><strong>Flyer: Fossile = 90&nbsp;% des CO₂</strong><span>A4 · PDF</span>
+          <a class="dl" href="assets/downloads/flyer-fossile-energie-co2.pdf" download>Herunterladen</a></div>
+      </div>
+
+      <div class="card">
+        <div class="thumb doc"><span class="doclabel"><span class="big">PDF</span><span class="sm">Flyer · A4</span></span></div>
+        <div class="body"><strong>Flyer: Vollgas auf die Leitplanke</strong><span>A4 · PDF</span>
+          <a class="dl" href="assets/downloads/flyer-klimakatastrophe-allgemein.pdf" download>Herunterladen</a></div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="assets/downloads/meme-fossile-90-prozent.png" alt="Sharepic: Fast 90 % des CO₂ aus Kohle, Öl und Gas"></div>
+        <div class="body"><strong>Sharepic: 90&nbsp;% des CO₂</strong><span>1080×1080 · PNG</span>
+          <a class="dl" href="assets/downloads/meme-fossile-90-prozent.png" download>Herunterladen</a></div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="assets/downloads/meme-fossile-kette.png" alt="Sharepic: Fossile → CO₂ → Erderwärmung → Katastrophe"></div>
+        <div class="body"><strong>Sharepic: Die Kette</strong><span>1080×1080 · PNG</span>
+          <a class="dl" href="assets/downloads/meme-fossile-kette.png" download>Herunterladen</a></div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="assets/downloads/meme-fossile-hebel.png" alt="Sharepic: Eine Ursache. Ein Hebel. Fossile raus."></div>
+        <div class="body"><strong>Sharepic: Der Hebel</strong><span>1080×1080 · PNG</span>
+          <a class="dl" href="assets/downloads/meme-fossile-hebel.png" download>Herunterladen</a></div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="assets/downloads/meme-klimakatastrophe-allgemein.png" alt="Sharepic: CO₂ steigt nicht nur. Es beschleunigt."></div>
+        <div class="body"><strong>Sharepic: Es beschleunigt</strong><span>1080×1080 · PNG</span>
+          <a class="dl" href="assets/downloads/meme-klimakatastrophe-allgemein.png" download>Herunterladen</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUELLEN -->
+<section id="quellen">
+  <div class="wrap">
+    <div class="step">Transparenz</div>
+    <h2>Alle Quellen</h2>
+    <ul class="sources">
+      <li>Fossile Energie / Ursache: <a href="https://www.un.org/en/climatechange/science/causes-effects-climate-change" target="_blank" rel="noopener">Vereinte Nationen — Causes and Effects of Climate Change</a></li>
+      <li>CO₂-Konzentration: <a href="https://gml.noaa.gov/ccgg/trends/" target="_blank" rel="noopener">NOAA Global Monitoring Laboratory (Mauna Loa)</a></li>
+      <li>CO₂-Ausstoß: <a href="https://globalcarbonbudget.org/" target="_blank" rel="noopener">Global Carbon Project</a> · <a href="https://ourworldindata.org/co2-emissions" target="_blank" rel="noopener">Our World in Data</a></li>
+      <li>Temperatur: <a href="https://climate.copernicus.eu/climate-bulletins" target="_blank" rel="noopener">Copernicus C3S/ECMWF</a> · <a href="https://wmo.int/" target="_blank" rel="noopener">WMO</a></li>
+      <li>Folgen: <a href="https://www.ipcc.ch/report/ar6/wg2/" target="_blank" rel="noopener">IPCC AR6 (WG2)</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="sig">Radikal bremsen. Jetzt.</div>
+    <p>Frei zur Weitergabe — Plakat · Flyer · Social Media.</p>
+    <p class="imprint">[ Impressum hier ergänzen — bei politischer Öffentlichkeitsarbeit in Deutschland erforderlich. ]</p>
+  </div>
+</footer>
+
+</body>
+</html>
